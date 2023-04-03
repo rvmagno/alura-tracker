@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main class="columns is-gapless is-multiline">
+    <div class="column is-one-quarter">
+      <BarraLateral />
+    </div>
+    <div class="column is-three-quarter">
+      <FormularioCentral /> 
+    </div>
+  </main>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
 
-export default {
+import { defineComponent } from 'vue'
+import BarraLateral from './components/BarraLateral.vue'
+import FormularioCentral from './components/FormularioCentral.vue'
+
+export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    BarraLateral,
+    FormularioCentral
   }
-}
+});
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
